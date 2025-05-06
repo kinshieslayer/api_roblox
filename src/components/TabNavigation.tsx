@@ -7,7 +7,7 @@ type TabNavigationProps = {
 };
 
 const TabNavigation = ({ selectedTab, onTabChange }: TabNavigationProps) => {
-  const tabs = ["About", "Store", "Servers"];
+  const tabs = ["About", "Store", "Servers", "Stats"];
 
   return (
     <div className="border-b">

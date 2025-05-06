@@ -5,9 +5,11 @@ import TabNavigation from "../components/TabNavigation";
 import StoreItems from "../components/StoreItems";
 import PurchasePopup from "../components/PurchasePopup";
 import ConfirmationPopup from "../components/ConfirmationPopup";
+import AboutSection from "../components/AboutSection";
+import StatsSection from "../components/StatsSection";
 
 const Index = () => {
-  const [selectedTab, setSelectedTab] = useState("Store");
+  const [selectedTab, setSelectedTab] = useState("About");
   const [purchasePopupOpen, setPurchasePopupOpen] = useState(false);
   const [confirmationOpen, setConfirmationOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<{ name: string; image: string } | null>(null);
@@ -44,15 +46,10 @@ const Index = () => {
           onTabChange={setSelectedTab} 
         />
         
+        {selectedTab === "About" && <AboutSection />}
+        
         {selectedTab === "Store" && (
           <StoreItems onBuyClick={handleBuyClick} />
-        )}
-        
-        {selectedTab === "About" && (
-          <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold">About This Game</h2>
-            <p className="mt-4">Game description would go here.</p>
-          </div>
         )}
         
         {selectedTab === "Servers" && (
@@ -61,6 +58,8 @@ const Index = () => {
             <p className="mt-4">Server list would go here.</p>
           </div>
         )}
+        
+        {selectedTab === "Stats" && <StatsSection />}
       </div>
 
       {purchasePopupOpen && selectedItem && (
