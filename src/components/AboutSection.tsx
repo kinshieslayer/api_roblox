@@ -1,14 +1,10 @@
 
-import ImageSlider from "./ImageSlider";
-
 const AboutSection = () => {
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-4">About This Game</h2>
       
-      <ImageSlider />
-      
-      <div className="max-w-3xl mx-auto mt-8">
+      <div className="max-w-3xl mx-auto">
         <h3 className="text-xl font-semibold mb-2">Description</h3>
         <p className="mb-4">
           A place to hang out with like minded people and roleplay. Own and live in amazing houses, 

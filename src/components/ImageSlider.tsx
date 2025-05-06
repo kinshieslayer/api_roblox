@@ -9,10 +9,9 @@ import {
 } from "@/components/ui/carousel";
 
 const images = [
-  "/lovable-uploads/2c4cf6e5-c6ae-4745-95f3-6cbf50a90645.png",
-  "/lovable-uploads/1df7cb00-4f14-451e-b3ec-ac7d401a44fc.png",
-  "/lovable-uploads/7c396ca5-444d-4dd0-bad0-2926aa83dfc5.png",
-  "/lovable-uploads/bff79ebf-0d16-444d-bacc-bb7f032f0b46.png"
+  "/lovable-uploads/bbf94c08-cc46-4eca-b092-098b942d6984.png",
+  "/lovable-uploads/5af9d27c-0032-4fd3-b47f-f61b92246305.png",
+  "/lovable-uploads/a3783310-78ca-442e-a65a-6588caa0cd67.png"
 ];
 
 const ImageSlider = () => {
@@ -43,7 +42,7 @@ const ImageSlider = () => {
                 <img 
                   src={image} 
                   alt={`Game Screenshot ${index + 1}`}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[300px] object-cover"
                 />
               </div>
             </div>
