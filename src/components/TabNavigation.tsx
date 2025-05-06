@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 
 type TabNavigationProps = {
@@ -7,7 +6,7 @@ type TabNavigationProps = {
 };
 
 const TabNavigation = ({ selectedTab, onTabChange }: TabNavigationProps) => {
-  const tabs = ["About", "Store", "Servers", "Stats"];
+  const tabs = ["Store", "About", "Servers", "Stats"];
 
   return (
     <div className="border-b">

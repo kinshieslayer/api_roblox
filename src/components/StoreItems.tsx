@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 type StoreItemsProps = {
@@ -9,62 +8,62 @@ const StoreItems = ({ onBuyClick }: StoreItemsProps) => {
   const items = [
     {
       name: "Vehicle Upgrade",
-      image: "/lovable-uploads/1df7cb00-4f14-451e-b3ec-ac7d401a44fc.png",
+      image: "/store images/Vehicle Upgrade.webp",
       isFree: true
     },
     {
       name: "Vehicle Speed Unlocked",
-      image: "/lovable-uploads/1df7cb00-4f14-451e-b3ec-ac7d401a44fc.png",
+      image: "/store images/Vehicle Speed Un.webp",
       isFree: true
     },
     {
       name: "Premium",
-      image: "/lovable-uploads/1df7cb00-4f14-451e-b3ec-ac7d401a44fc.png",
+      image: "/store images/premuim.webp",
       isFree: true
     },
     {
       name: "Music Unlocked",
-      image: "/lovable-uploads/1df7cb00-4f14-451e-b3ec-ac7d401a44fc.png",
+      image: "/store images/msuic.webp",
       isFree: true
     },
     {
       name: "On Demand Fire",
-      image: "/lovable-uploads/1df7cb00-4f14-451e-b3ec-ac7d401a44fc.png",
+      image: "/store images/on demand fire.webp",
       isFree: true
     },
     {
       name: "Horse Unlocked",
-      image: "/lovable-uploads/1df7cb00-4f14-451e-b3ec-ac7d401a44fc.png",
+      image: "/store images/horse unlocked.webp",
       isFree: true
     },
     {
       name: "Land Unlocked",
-      image: "/lovable-uploads/7c396ca5-444d-4dd0-bad0-2926aa83dfc5.png",
+      image: "/store images/land unlocked.webp",
       isFree: true
     },
     {
       name: "Faces Unlocked",
-      image: "/lovable-uploads/7c396ca5-444d-4dd0-bad0-2926aa83dfc5.png",
+      image: "/store images/faces uncloked.webp",
       isFree: true
     },
     {
       name: "Vehicle Pack",
-      image: "/lovable-uploads/7c396ca5-444d-4dd0-bad0-2926aa83dfc5.png",
+      image: "/store images/vehicle pack.webp",
       isFree: true
     },
     {
       name: "Penthouse",
-      image: "/lovable-uploads/7c396ca5-444d-4dd0-bad0-2926aa83dfc5.png",
+      image: "/store images/penthouse.webp",
       isFree: true
     },
     {
       name: "Theme Pack",
-      image: "/lovable-uploads/7c396ca5-444d-4dd0-bad0-2926aa83dfc5.png",
+      image: "/store images/theme pack.webp",
       isFree: true
     },
     {
       name: "Disaster Pass",
-      image: "/lovable-uploads/7c396ca5-444d-4dd0-bad0-2926aa83dfc5.png",
+      image: "/store images/disaster pack.webp",
       isFree: true
     }
   ];

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -41,7 +40,7 @@ const PurchasePopup = ({ item, onConfirm, onCancel }: PurchasePopupProps) => {
           <div className="flex gap-2">
             <Button 
               variant="outline" 
-              className="flex-1 border-gray-600 text-white"
+              className="flex-1 border-gray-600 text-black"
               onClick={onCancel}
             >
               Cancel

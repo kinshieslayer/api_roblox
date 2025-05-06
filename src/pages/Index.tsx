@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import GameHeader from "../components/GameHeader";
 import TabNavigation from "../components/TabNavigation";
@@ -9,7 +8,7 @@ import AboutSection from "../components/AboutSection";
 import StatsSection from "../components/StatsSection";
 
 const Index = () => {
-  const [selectedTab, setSelectedTab] = useState("About");
+  const [selectedTab, setSelectedTab] = useState("Store");
   const [purchasePopupOpen, setPurchasePopupOpen] = useState(false);
   const [confirmationOpen, setConfirmationOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<{ name: string; image: string } | null>(null);
