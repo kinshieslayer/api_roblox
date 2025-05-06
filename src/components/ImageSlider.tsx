@@ -34,27 +34,25 @@ const ImageSlider = () => {
   }, [autoPlay]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-6">
-      <Carousel className="w-full">
-        <CarouselContent>
-          {images.map((image, index) => (
-            <CarouselItem key={index}>
-              <div className="p-1">
-                <div className="overflow-hidden rounded-lg">
-                  <img 
-                    src={image} 
-                    alt={`Game Screenshot ${index + 1}`}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
+    <Carousel className="w-full">
+      <CarouselContent>
+        {images.map((image, index) => (
+          <CarouselItem key={index}>
+            <div>
+              <div className="overflow-hidden">
+                <img 
+                  src={image} 
+                  alt={`Game Screenshot ${index + 1}`}
+                  className="w-full h-auto object-cover"
+                />
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="-left-4 bg-white" />
-        <CarouselNext className="-right-4 bg-white" />
-      </Carousel>
-    </div>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="absolute left-2 bg-white/70" />
+      <CarouselNext className="absolute right-2 bg-white/70" />
+    </Carousel>
   );
 };
 

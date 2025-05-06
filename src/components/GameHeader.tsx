@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import ImageSlider from "./ImageSlider";
 
 const GameHeader = () => {
   return (
@@ -17,11 +18,7 @@ const GameHeader = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-2/3">
-            <img 
-              src="/lovable-uploads/2c4cf6e5-c6ae-4745-95f3-6cbf50a90645.png" 
-              alt="Game Banner" 
-              className="w-full h-auto"
-            />
+            <ImageSlider />
           </div>
           
           <div className="md:w-1/3 p-4 bg-white">
