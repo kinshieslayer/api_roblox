@@ -34,25 +34,25 @@ const PurchasePopup = ({ item, onConfirm, onCancel }: PurchasePopupProps) => {
 
         try {
             const response = await fetch(`/api/user/enhanced/by-username/${encodeURIComponent(username)}`);
-            const contentType = response.headers.get('content-type') || '';
-
             if (!response.ok) {
                 let message = 'Something went wrong.';
                 try {
-                    if (contentType.includes('application/json')) {
-                        const body = await response.json();
-                        message = body?.error || message;
-                    } else {
+                    const body = await response.json();
+                    message = body?.error || message;
+                } catch {
+                    try {
                         const text = await response.text();
                         message = text?.slice(0, 200) || message;
-                    }
-                } catch {}
+                    } catch {}
+                }
                 setError(message);
                 return;
             }
 
-            const data = contentType.includes('application/json') ? await response.json() : null;
-            if (!data) {
+            let data: any = null;
+            try {
+                data = await response.json();
+            } catch {
                 setError('Unexpected response from server.');
                 return;
             }
