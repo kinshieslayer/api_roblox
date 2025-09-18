@@ -88,10 +88,10 @@ const StoreItems = ({ onBuyClick }: StoreItemsProps) => {
             </div>
             <Button 
               variant="outline" 
-              className="w-full text-sm py-1 px-4"
+              className="w-full text-sm py-1 px-4 text-green-500" 
               onClick={() => onBuyClick({ name: item.name, image: item.image })}
             >
-              Buy
+              0 robux
             </Button>
           </div>
         ))}

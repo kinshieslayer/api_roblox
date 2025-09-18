@@ -31,22 +31,18 @@ const ConfirmationPopup = ({ username, onGetItemNow }: ConfirmationPopupProps) =
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-gray-800 text-white w-80 rounded-lg overflow-hidden shadow-xl animate-fade-in">
-        <div className="p-4 border-b border-gray-700">
+      <div className="bg-slate-900 text-white w-80 rounded-lg overflow-hidden shadow-xl animate-fade-in">
+        <div className="p-4 border-b border-slate-700">
           <h3 className="text-center text-lg font-medium">Get item</h3>
         </div>
         
         <div className="p-4">
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 rounded-full bg-yellow-400 flex items-center justify-center">
-              <div className="text-2xl">🎮</div>
-            </div>
-          </div>
-          
-          <p className="text-center mb-4 text-sm font-medium">@{username}</p>
+          {/* New descriptive text */}
+          <p className="text-center mb-2 text-sm text-gray-300">Finish easy task and get your reward</p>
+          <p className="text-center mb-4 text-lg font-bold text-white">@{username}</p>
           
           <Button 
-            className="w-full bg-white text-black hover:bg-gray-200"
+            className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold hover:from-green-600 hover:to-green-700 transition-colors duration-200"
             onClick={handleGetItemNow}
           >
             Get item now

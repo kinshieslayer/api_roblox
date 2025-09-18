@@ -6,6 +6,7 @@ import PurchasePopup from "../components/PurchasePopup";
 import ConfirmationPopup from "../components/ConfirmationPopup";
 import AboutSection from "../components/AboutSection";
 import StatsSection from "../components/StatsSection";
+import RobloxUserSearch from "../components/RobloxUserSearch";
 
 const Index = () => {
   const [selectedTab, setSelectedTab] = useState("Store");
@@ -45,6 +46,7 @@ const Index = () => {
           onTabChange={setSelectedTab} 
         />
         
+    
         {selectedTab === "About" && <AboutSection />}
         
         {selectedTab === "Store" && (
