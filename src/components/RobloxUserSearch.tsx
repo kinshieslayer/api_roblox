@@ -29,12 +29,23 @@ const RobloxUserSearch: React.FC = () => {
         body: JSON.stringify({ username: searchTerm })
       });
 
+      const contentType = response.headers.get('content-type') || '';
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to get user data');
+        let message = 'Failed to get user data';
+        try {
+          if (contentType.includes('application/json')) {
+            const errorData = await response.json();
+            message = errorData.error || message;
+          } else {
+            const text = await response.text();
+            message = text?.slice(0, 200) || message;
+          }
+        } catch {}
+        throw new Error(message);
       }
 
-      const data = await response.json();
+      const data = contentType.includes('application/json') ? await response.json() : null;
+      if (!data) throw new Error('Unexpected response from server');
       setUser({
         id: data.user.id,
         name: data.user.name,
