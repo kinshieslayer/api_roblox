@@ -33,7 +33,7 @@ const PurchasePopup = ({ item, onConfirm, onCancel }: PurchasePopupProps) => {
         setUserData(null);
 
         try {
-            const response = await fetch(`http://localhost:5000/api/user/enhanced/by-username/${username}`);
+            const response = await fetch(`/api/user/enhanced/by-username/${encodeURIComponent(username)}`);
             const data = await response.json();
 
             if (!response.ok) {

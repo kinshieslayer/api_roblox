@@ -21,7 +21,7 @@ const RobloxUserSearch: React.FC = () => {
     setUser(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/roblox/search', {
+      const response = await fetch('/api/roblox/search', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
